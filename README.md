@@ -41,7 +41,7 @@ _image will be later..._
 - [ ] Side mount **0/4**
       
 _image will be later..._
-- [] Wheel hub **0/3**
+- [ ] Wheel hub **0/3**
 
 _image will be later..._
 - [ ] Lidar mount **0/1**
