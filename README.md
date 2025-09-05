@@ -26,6 +26,8 @@ _image will be later..._
 _image will be later..._
 
 - [x] Pillars ![100%](https://progress-bar.xyz/100)
+<img src="images/Pillar.png" width="400"/>
+
 
 ### 3D printed:
 - [x] Wheel brackets **3/3**
