@@ -4,11 +4,11 @@
 <img src="images/Motor_bracket.png" width="400"/>
 
 - [x] Lower floor ![100%](https://progress-bar.xyz/100)
-      
-_image will be later..._
+<img src="images/Lower_floor.png" width="400"/>
+
 - [x] Medium floor ![100%](https://progress-bar.xyz/100)
-      
-_image will be later..._
+<img src="images/Medium_floor.png" width="400"/>
+
 - [ ] Upper floor ![60%](https://progress-bar.xyz/60)
       
 _image will be later..._
