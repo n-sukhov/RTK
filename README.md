@@ -3,10 +3,10 @@
 - [x] Wheel brackets ![100%](https://progress-bar.xyz/100)
 <img src="images/Motor_bracket.png" width="400"/>
 
-- [ ] Lower floor ![90%](https://progress-bar.xyz/90)
+- [x] Lower floor ![100%](https://progress-bar.xyz/100)
       
 _image will be later..._
-- [ ] Medium floor ![70%](https://progress-bar.xyz/70)
+- [x] Medium floor ![100%](https://progress-bar.xyz/100)
       
 _image will be later..._
 - [ ] Upper floor ![60%](https://progress-bar.xyz/60)
@@ -25,11 +25,16 @@ _image will be later..._
       
 _image will be later..._
 
+- [x] Pillars ![100%](https://progress-bar.xyz/100)
+
 ### 3D printed:
 - [x] Wheel brackets **3/3**
 
 _image will be later..._
-- [ ] Lower floor **0/1**
+- [x] Lower floor **1/1**
+
+_image will be later..._
+- [ ] Pillars **0/8**
       
 _image will be later..._
 - [ ] Medium floor **0/1**
