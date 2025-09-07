@@ -30,16 +30,16 @@ _image will be later..._
 
 
 ### 3D printed:
-- [x] Wheel brackets **3/3**
+- [x] Wheel brackets **4/3**
 
 _image will be later..._
 - [x] Lower floor **1/1**
 
 _image will be later..._
-- [ ] Pillars **0/8**
+- [ ] Pillars **4/8**
       
 _image will be later..._
-- [ ] Medium floor **0/1**
+- [ ] Medium floor **0/1** - will be done by 23:20 07/09/2025
       
 _image will be later..._
 - [ ] Upper floor **0/1**
