@@ -36,10 +36,10 @@ _image will be later..._
 - [x] Lower floor **1/1**
 
 _image will be later..._
-- [ ] Pillars **4/8**
+- [x] Pillars **8/8**
       
 _image will be later..._
-- [ ] Medium floor **0/1** - will be done by 23:20 07/09/2025
+- [x] Medium floor **1/1**
       
 _image will be later..._
 - [ ] Upper floor **0/1**
