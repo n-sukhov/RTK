@@ -1,6 +1,6 @@
 import ev3dev2.motor as motor
 import time
-from math import pi, cos, sin, atan2, sqrt, arctan
+from math import pi, cos, sin, atan2, sqrt, atan
 import threading
 import socket
 import struct
@@ -59,8 +59,8 @@ def check_angel(angel):
         return angel
 
 DOTS = [(1, -1)]
-RADIUS = 0.028
-BASE = 0.185 #?
+RADIUS = 0.04 #?
+BASE = 0.15 #?
 ERROR = 0.05
 X, Y = 0, 0
 k_s = 3  
@@ -82,10 +82,11 @@ lastposright =  motorright.position * pi / 180
 x_current, y_current, theta = 0, 0, 0
 timeStart = time.time()
 
+alpha = 0
 v_id = 0
 omega_id = 0
 
-pid_norm = 100 / pi
+pid_norm = 200 / pi
 pid = PID_regulator(1, 0, 0, 0.02, pi / 2)
 
 try:
@@ -135,12 +136,19 @@ try:
         L_d = 0.2 #Расстояние между передними и задним колёсами 
         wr_d = saturation(0.5 * (2*v_id + BASE * omega_id) / RADIUS)
         wl_d = saturation(0.5 * (2*v_id - BASE * omega_id) / RADIUS)
-        r = BASE * RADIUS / (4 * pi) * (wr_d + wl_d) / (wr_d - wl_d)
-        alpha = arctan(L_d/r)
+        
+        if wr_d - wl_d:
+            r = BASE / 2 * (wr_d + wl_d) / (wr_d - wl_d)
+            print("r= " + str(r))
+            try:
+                alpha = atan(L_d / r)
+            except ZeroDivisionError:
+                alpha = pi / 2
+        else:
+            alpha = 0
 
-        pid_signal = pid.get_pid_control_signal(motormedium.position * pi / 180, alpha)
-        motormedium.on(pid_signal * pid_norm)
-
+        pid_signal = pid.get_pid_control_signal(motormedium.position * pi / 180 - startPosmedium, alpha)
+        motormedium.run_direct(duty_cycle_sp=pid_signal * pid_norm)
         motorright.on(wr_d)
         motorleft.on(wl_d)
 
@@ -148,7 +156,8 @@ try:
         lastposright = posright
 
 except Exception as e:
-    print('Error')
+    print(e)
 finally:
     motorleft.stop()
     motorright.stop()
+    motormedium.stop()
